@@ -1,12 +1,8 @@
-// first we are import the react library
 import React from 'react';
-import './App.css';
-// we are going to import the class based component file 
 import Main from './components/Main';
 import Footer from './components/Footer';
 import Header from './components/Header';
-// we created our first Class based Component
-// we inherited properties and behaviors from the React Component Class
+
 class App extends React.Component {
 
   render() {
@@ -19,7 +15,7 @@ class App extends React.Component {
         
 
       </div>
-    )
+    );
   }
 }
 
