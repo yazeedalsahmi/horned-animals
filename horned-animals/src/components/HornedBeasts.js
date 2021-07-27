@@ -21,12 +21,14 @@ class HornedBeasts extends React.Component{
         vote : this.state.vote +1  ,
       })
     }
-
+    handleTheModelOnHornedBeasts= () => {
+      this.props.handleTheModel(this.props.title);
+    }
   render(){
     return(
       <div className='cards'>
-    <Card>
-    <Card.Img variant="top"  src={this.props.image_url} itle={this.props.title} />
+    <Card style={{ width: '18rem' }} onClick={this.handleTheModelOnHornedBeasts}>
+    <Card.Img variant="top"  src={this.props.image_url} title={this.props.title} />
     <Card.Body>
       <Card.Title>{this.props.title}</Card.Title>
       <Card.Text>
@@ -34,8 +36,8 @@ class HornedBeasts extends React.Component{
       </Card.Text>
     </Card.Body>
     <Card.Footer>
-    <Button variant="primary" onClick ={this.UserClick}>vote </Button>
-      <small className="text-muted">   {this.state.vote} ❤️</small>
+    <Button variant="primary" onClick ={this.UserClick}>❤️ </Button>
+      <small className="text-muted">   {this.state.vote} </small>
     </Card.Footer>
   </Card>
   </div>
